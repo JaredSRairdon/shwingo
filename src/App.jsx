@@ -1,33 +1,42 @@
 import { useState, useEffect } from 'react'
-import { createClient } from "@supabase/supabase-js"
+import { supabase } from './apis/supabaseClient'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavigationBar from './components/NavigationBar/NavigationBar';
+import Home from './pages/Home/Home';
+import Auth from './pages/Account/Auth'
+import AccountDetails from './pages/Account/AccountDetails'
 import './App.css'
 
-const supabase = createClient("https://jwvbdcxfjcsrjkybmhyq.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp3dmJkY3hmamNzcmpreWJtaHlxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA1MTQ0OTEsImV4cCI6MjAxNjA5MDQ5MX0.HuMSoz_v4hCu43teLOFQAdiWmEYrsjcbO-Os3WLH7hs");
-
 function App() {
-  const [games, setGames] = useState([]);
+  const [session, setSession] = useState(null)
 
   useEffect(() => {
-    getGames();
-  }, []);
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session)
+    })
 
-  async function getGames() {
-    const { data } = await supabase.from("games").select();
-    setGames(data);
-  }
+    supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session)
+    })
+  }, [])
 
   return (
     <>
-      <ul>
-        {games.map((game) => (
-          <li key={game.title}>
-            {game.title}<br/>
-            {game.description}
-          </li>
-        ))}
-      </ul>
+      <Router>
+        <div className="container">
+          <NavigationBar session={session}/>
+          <Routes>
+            <Route index element={<Home/>}/>
+            <Route path="account" element={!session ? <Auth /> : <AccountDetails key={session.user.id} session={session} />}/>
+          </Routes>
+        </div>
+      </Router>
+
+
+
     </>
-  );
+
+  )
 }
 
 

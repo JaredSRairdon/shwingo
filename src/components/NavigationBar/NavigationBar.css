@@ -1,0 +1,28 @@
+.navbar {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-logo {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.5rem;
+}
+
+.nav-links {
+    color: white;
+    list-style: none;
+    margin-right: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: inherit;
+    text-decoration: inherit;
+}
