@@ -1,0 +1,30 @@
+.game-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 9rem;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: transform .2s; /* Animation */
+}
+
+.game-card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.game-card > img {
+    max-width: 7rem;
+    border: 1px solid gray;
+    border-radius: 1rem;
+}
+
+.game-description {
+    margin: 0;
+}
+
+.game-title {
+    margin: 0.3rem 0 0.3rem 0;
+}

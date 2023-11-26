@@ -5,6 +5,7 @@ import NavigationBar from './components/NavigationBar/NavigationBar';
 import Home from './pages/Home/Home';
 import Auth from './pages/Account/Auth'
 import AccountDetails from './pages/Account/AccountDetails'
+import GamePage from './pages/GamePage/GamePage';
 import './App.css'
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Routes>
             <Route index element={<Home/>}/>
             <Route path="account" element={!session ? <Auth /> : <AccountDetails key={session.user.id} session={session} />}/>
+            <Route path="games/:hyphenTitle" element={<GamePage/>} />
           </Routes>
         </div>
       </Router>

@@ -16,7 +16,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    height: 100vh;
+    min-height: 100%;
 }
 
 .sidebar-categories {
@@ -43,26 +43,7 @@
 
 /* -- HOMEPAGE GAME SECTIONS -- */
 
-.section-game {
+.section-games {
     display: flex;
-    flex-direction: column;
-    max-width: 9rem;
-    align-items: center;
-    border: 1px solid gray;
-    border-radius: 1rem;
-    padding: 1rem;
-}
-
-.section-game > img {
-    max-width: 7rem;
-    border: 1px solid gray;
-    border-radius: 1rem;
-}
-
-.game-description {
-    margin: 0;
-}
-
-.game-title {
-    margin: 0.3rem 0 0.3rem 0;
+    gap: 1.5rem;
 }
