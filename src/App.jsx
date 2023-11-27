@@ -24,12 +24,12 @@ function App() {
   return (
     <>
       <Router>
-        <div className="container">
-          <NavigationBar session={session}/>
+        <NavigationBar session={session}/>  
+        <div className="router-container">
           <Routes>
             <Route index element={<Home/>}/>
             <Route path="account" element={!session ? <Auth /> : <AccountDetails key={session.user.id} session={session} />}/>
-            <Route path="games/:hyphenTitle" element={<GamePage/>} />
+            <Route path="games/:hyphenTitle" element={<GamePage session={session}/>} />
           </Routes>
         </div>
       </Router>

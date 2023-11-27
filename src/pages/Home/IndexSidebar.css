@@ -1,0 +1,32 @@
+/* -- INDEX SIDEBAR -- */
+
+.index-sidebar-container {
+    background-color: rgb(83, 83, 83);
+    width: 260px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+.sidebar-categories {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-cell {
+    padding: 1.8rem;
+}
+
+.sidebar-link-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+}
+
+#grade-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}

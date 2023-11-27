@@ -1,44 +1,11 @@
 .homepage-container {
     display: flex;
     width: 100vw;
-    margin-top: 65.52px;
+    /* margin-top: 65.52px; */
 }
 
 .content-container {
     padding-left: 2rem;
-}
-
-/* -- INDEX SIDEBAR -- */
-
-.index-sidebar-container {
-    background-color: gray;
-    width: 260px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    min-height: 100%;
-}
-
-.sidebar-categories {
-    display: flex;
-    flex-direction: column;
-}
-
-.sidebar-cell {
-    padding: 1.8rem;
-}
-
-.sidebar-link-list {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    gap: 1rem;
-}
-
-#grade-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
 }
 
 /* -- HOMEPAGE GAME SECTIONS -- */
