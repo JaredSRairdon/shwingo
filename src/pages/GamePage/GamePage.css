@@ -1,0 +1,31 @@
+.gamepage-container {
+    width: 100vw;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+}
+
+.game-window {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    padding-bottom: 10rem;
+}
+
+#game-iframe {
+    border: none;
+    width: 80%;
+    height: 100%;
+    border-radius: 1rem;
+    /* margin-bottom: 20rem; */
+}
+
+/* ============ MEDIA QUERIES (MEDIUM DEVICES/TABLET) =========== */
+@media screen and (max-width: 1024px) {
+
+  }
+  
+  /* ============ MEDIA QUERIES (SMALL DEVICES/PHONE) =========== */
+  @media screen and (max-width: 600px) {
+
+  }
