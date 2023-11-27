@@ -11,7 +11,7 @@
 }
 
 .game-card:hover {
-    transform: scale(1.1);
+    transform: translate(0, -10px);
     cursor: pointer;
 }
 
