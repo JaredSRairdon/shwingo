@@ -28,3 +28,17 @@
 .game-title {
     margin: 0.3rem 0 0.3rem 0;
 }
+
+/* ============ MEDIA QUERIES (MEDIUM DEVICES/TABLET) =========== */
+@media screen and (max-width: 1024px) {
+
+}
+  
+/* ============ MEDIA QUERIES (SMALL DEVICES/PHONE) =========== */
+@media screen and (max-width: 600px) {
+    .game-card {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+        flex: 1 1 0px;
+    }
+}

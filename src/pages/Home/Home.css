@@ -9,8 +9,43 @@
 }
 
 /* -- HOMEPAGE GAME SECTIONS -- */
+.section-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.section-header h2, .section-header p {
+    margin: 0;
+}
 
 .section-games {
     display: flex;
     gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* ============ MEDIA QUERIES (MEDIUM DEVICES/TABLET) =========== */
+@media screen and (max-width: 1024px) {
+
+}
+
+/* ============ MEDIA QUERIES (SMALL DEVICES/PHONE) =========== */
+@media screen and (max-width: 600px) {
+    .homepage-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 1.5rem 0rem 1.5rem
+    }
+
+    .content-container {
+        padding-left: 0;
+    }
+
+    .section-games {
+        justify-content: center;
+    }
+    
 }

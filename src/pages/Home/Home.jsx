@@ -13,8 +13,10 @@ function Home() {
         <IndexSidebar/>
         <div className='content-container'>
           <section className="homepage-section">
-            <h2 className='section-header'>Popular Games</h2>
-            <p>The most popular games across all of Shwingo!</p>
+            <div className='section-header'>
+              <h2>Popular Games</h2>
+              <p>The most popular games across all of Shwingo!</p>
+            </div>
             <div className="section-games">
               {
                 gameList.map((game, index) => {

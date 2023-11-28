@@ -30,3 +30,15 @@
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
+
+/* ============ MEDIA QUERIES (MEDIUM DEVICES/TABLET) =========== */
+@media screen and (max-width: 1024px) {
+
+}
+  
+/* ============ MEDIA QUERIES (SMALL DEVICES/PHONE) =========== */
+@media screen and (max-width: 600px) {
+    .index-sidebar-container {
+        display: none;
+    }
+}
